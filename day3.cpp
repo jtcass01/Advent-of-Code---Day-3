@@ -1,7 +1,8 @@
 /*Jacob Cassady
 Advent of Code
 Day 3
-12/6/15*/
+Date Created: 12/6/15
+Last Updated: 6/17/16*/
 
 #include <iostream>
 #include <fstream>
@@ -53,7 +54,12 @@ using namespace std;
 		string line;
 		//line = "^v^v^v^v^v";
 		set<int,int> s;
-		ifstream myfile("C:\\Users\\JakeT\\OneDrive\\Documents\\Advent of Code\\Day 3\\input.txt");
+		char fileLocation[100];
+	
+		cout << "Please enter the file path: ";
+		cin >> fileLocation;
+			
+		ifstream myfile(fileLocation);
 		if(myfile.is_open()){
 			while(getline(myfile,line)){
 				cout << line << endl;
